@@ -1,0 +1,93 @@
+.servicesGridSection {
+    padding: 100px 0;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto 80px;
+    }
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardIconWrapper {
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+.serviceCard h3 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--accent-1);
+}
+
+.serviceCard p {
+    color: var(--accent-2);
+    margin-bottom: 32px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.cardFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+}
+
+.cardFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--accent-2);
+}
+
+.featureIcon {
+    color: var(--primary);
+}
+
+.secondaryServices {
+    text-align: center;
+}
+
+.secondaryTitle {
+    margin-bottom: 40px;
+    color: var(--accent-1);
+}
+
+.asGrid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.asTag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: var(--primary);
+    font-weight: 500;
+    border-radius: 99px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.asTag span {
+    color: var(--accent-1);
+}

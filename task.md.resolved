@@ -1,0 +1,46 @@
+# Task List: Cuvatex Landing Page
+
+## Phase 1: Foundation & Setup
+- [ ] Initialize Next.js project with TypeScript and Tailwind CSS (or Vanilla CSS as per instructions) [/]
+- [ ] Install dependencies (framer-motion for transitions, lucide-react for icons, i18next for multilingual)
+- [ ] Setup folder structure (components, layouts, hooks, contexts, public assets)
+- [ ] Initialize design system (colors, typography, spacing in `globals.css`)
+- [ ] Setup multilingual routing and translations (EN, FR, AR)
+
+## Phase 2: Core Layout 
+- [ ] Create `Layout` component (Navbar, Footer)
+- [ ] Implement responsive Navbar with language switcher
+- [ ] Implement professional Footer
+
+## Phase 3: Home Page Implementation
+- [ ] Hero Section (animated background, strong heading, CTA)
+- [ ] Services Overview Preview
+- [ ] Why Cuvatex Section
+- [ ] Selected Projects Snapshot
+- [ ] Tech Stack Marquee/Grid
+- [ ] CTA Section
+
+## Phase 4: Service & Special Pages
+- [ ] Main Services Page & Individual Service Detail Template
+- [ ] MVP for Startups Page (Conversion focused)
+- [ ] Process (How we work) Page
+- [ ] Portfolio / Projects Page (Grid with filters)
+- [ ] Pricing Page
+- [ ] About Page
+- [ ] FAQ Page
+
+## Phase 5: Components & Global Sections
+- [ ] Testimonials Component
+- [ ] Contact Section (WhatsApp integration)
+- [ ] Form components with validation
+
+## Phase 6: Refinement & SEO
+- [ ] Meta tags & SEO optimization
+- [ ] Performance optimization (Lighthouse 90+)
+- [ ] RTL support for Arabic
+- [ ] Final UI/UX polish and micro-animations
+
+## Phase 7: Verification
+- [ ] Cross-browser testing
+- [ ] Mobile responsiveness check
+- [ ] Verification against PRD and Design Spec

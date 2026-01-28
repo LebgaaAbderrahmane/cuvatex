@@ -1,0 +1,444 @@
+{
+    "Index": {
+        "title": "Cuvatex – Software Development Agency",
+        "description": "Cuvatex builds scalable, high-quality digital products for startups and businesses.",
+        "hero": {
+            "badge": "Next-Gen Digital Solutions",
+            "title_start": "Building the Future of ",
+            "title_highlight": "Digital Engineering",
+            "subtitle": "We combine technical precision with creative strategy to build high-performance products that drive business growth.",
+            "cta_start": "Start Your Project",
+            "cta_explore": "Explore Portfolio"
+        }
+    },
+    "Navigation": {
+        "home": "Home",
+        "services": "Services",
+        "mvp": "MVPs",
+        "portfolio": "Portfolio",
+        "process": "Process",
+        "pricing": "Pricing",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "Theme": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    },
+    "Statistics": {
+        "projects": "Projects",
+        "clients": "Happy Clients",
+        "success": "Success Rate",
+        "awards": "Awards Won"
+    },
+    "Services": {
+        "title": "Our Services",
+        "subtitle": "We provide end-to-end digital solutions for modern businesses.",
+        "web": {
+            "title": "Web Development",
+            "description": "Scalable, high-performance web applications built with modern frameworks like React and Next.js."
+        },
+        "mobile": {
+            "title": "Mobile Development",
+            "description": "Native and cross-platform mobile apps that provide seamless user experiences on iOS and Android."
+        },
+        "mvp": {
+            "title": "MVP for Startups",
+            "description": "Turn your idea into a production-ready product in weeks. We focus on core features that matter."
+        },
+        "design": {
+            "title": "Product Design",
+            "description": "User-centric UI/UX design that combines aesthetics with effortless functionality."
+        },
+        "cloud": {
+            "title": "Cloud Infrastructure",
+            "description": "Scale your application with ease using our robust cloud setup and DevOps practices."
+        },
+        "custom": {
+            "title": "Custom Software",
+            "description": "Tailored software solutions designed to solve your specific business challenges."
+        }
+    },
+    "Projects": {
+        "title": "Featured Projects",
+        "subtitle": "A selection of our latest work helping startups and enterprises scale.",
+        "view_all": "View All Projects",
+        "cta": "Read Case Study",
+        "categories": {
+            "web": "Web Application",
+            "mobile": "Mobile Design & Dev",
+            "design": "Product Design",
+            "fullstack": "Full Stack Dev"
+        },
+        "items": {
+            "fintech": {
+                "title": "Fintech Platform Redesign",
+                "description": "A comprehensive overhaul of a banking dashboard focusing on user flow and performance."
+            },
+            "healthcare": {
+                "title": "Healthcare Mobile App",
+                "description": "A patient-centric mobile application for managing appointments and digital health records."
+            },
+            "ai": {
+                "title": "AI SaaS Dashboard",
+                "description": "Real-time data visualization platform for an AI-powered logistics company."
+            },
+            "elearning": {
+                "title": "E-learning Experience",
+                "description": "An interactive learning portal with real-time collaboration features for students worldwide."
+            }
+        }
+    },
+    "Process": {
+        "title": "Our Process",
+        "subtitle": "How we turn your ideas into high-quality digital products.",
+        "step": "Step",
+        "steps": {
+            "discovery": {
+                "title": "Discovery & Strategy",
+                "description": "We dive deep into your business goals, target audience, and technical requirements to build a roadmap to success."
+            },
+            "design": {
+                "title": "Design & UX",
+                "description": "Our designers create intuitive, high-fidelity mockups that focus on user experience and brand identity."
+            },
+            "development": {
+                "title": "Development",
+                "description": "We build your product using modern, scalable technologies with constant feedback loops and agile methodology."
+            },
+            "testing": {
+                "title": "Testing & QA",
+                "description": "Rigorous testing across devices and browsers to ensure a bug-free, performant, and secure product."
+            },
+            "deployment": {
+                "title": "Deployment & Support",
+                "description": "We handle the production launch and provide ongoing support to ensure your product scales with your business."
+            }
+        }
+    },
+    "Pricing": {
+        "title": "Transparent Pricing",
+        "subtitle": "Flexible options tailored to your project's scope and complexity.",
+        "popular": "Most Popular",
+        "cta": "Get Started",
+        "plans": {
+            "mvp": {
+                "name": "MVP Development",
+                "price": "Starting at $5k",
+                "description": "Perfect for startups looking to validate their core idea quickly.",
+                "features": [
+                    "Core feature development",
+                    "UI/UX Design",
+                    "Deployment",
+                    "2 weeks support"
+                ]
+            },
+            "custom": {
+                "name": "Custom Product",
+                "price": "Custom Pricing",
+                "description": "End-to-end development for businesses scaling their digital presence.",
+                "features": [
+                    "Full scale development",
+                    "Advanced UI/UX",
+                    "Infrastructure setup",
+                    "Scalability focus",
+                    "1 month support"
+                ]
+            },
+            "retainer": {
+                "name": "Monthly Retainer",
+                "price": "$2k / month",
+                "description": "Ongoing development and maintenance for growing companies.",
+                "features": [
+                    "Priority support",
+                    "Monthly feature updates",
+                    "Infrastructure monitoring",
+                    "Security audits"
+                ]
+            }
+        }
+    },
+    "FAQ": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about working with us.",
+        "items": [
+            {
+                "question": "What is your typical project timeline?",
+                "answer": "A typical MVP development project takes between 4 to 8 weeks, depending on the complexity of core features. We prioritize speed-to-market while maintaining high engineering standards."
+            },
+            {
+                "question": "Do you offer post-launch support?",
+                "answer": "Yes, we provide various support packages ranging from weekly maintenance to dedicated monthly retainers to ensure your product continues to scale effectively."
+            },
+            {
+                "question": "Which technologies do you specialize in?",
+                "answer": "We specialize in modern JavaScript frameworks (React, Next.js, Node.js), mobile development (React Native, Flutter), and robust cloud infrastructure (AWS, Docker)."
+            },
+            {
+                "question": "How do you handle project management?",
+                "answer": "We use agile methodology with weekly sprints and transparent communication. You'll have regular access to demos and progress reports through dedicated channels."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Let's build something amazing together",
+        "subtitle": "Ready to start your next project? Reach out to us and let's discuss how we can help you scale your business.",
+        "whatsapp": {
+            "title": "WhatsApp Chat",
+            "subtitle": "Fastest response time",
+            "cta": "Contact via WhatsApp",
+            "note": "Typically responds in under 2 hours during business hours."
+        },
+        "email": {
+            "title": "Email Us",
+            "subtitle": "hello@cuvatex.com",
+            "cta": "Send us a message",
+            "label": "Prefer email?"
+        },
+        "location": {
+            "title": "Location",
+            "subtitle": "Remote-First Agency"
+        },
+        "cta_box": {
+            "title": "Start a conversation",
+            "description": "Most projects start with a simple chat. We're available on WhatsApp to discuss your requirements in real-time."
+        }
+    },
+    "Footer": {
+        "tagline": "Building the next generation of digital products with engineering excellence.",
+        "columns": {
+            "services": "Our Services",
+            "company": "Company",
+            "support": "Support",
+            "contact": "Contact"
+        },
+        "links": {
+            "services": "Our Services",
+            "mvp": "MVP Development",
+            "process": "Our Process",
+            "faq": "FAQ",
+            "legal": "Terms of Service",
+            "privacy": "Privacy Policy",
+            "whatsapp": "WhatsApp Chat",
+            "email": "Email Support"
+        },
+        "rights": "Cuvatex. All rights reserved."
+    },
+    "MVP": {
+        "title": "Build Your MVP with Speed and Precision",
+        "subtitle": "We help startups launch their products in weeks, not months. Focus on your business, we handle the tech.",
+        "timeline": "4-8 Weeks",
+        "deliverables": "Full Product",
+        "cta": "Get a Quote for Your MVP",
+        "benefits": {
+            "title": "Why choose Cuvatex for your MVP?",
+            "rapid": {
+                "title": "Rapid Market Entry",
+                "description": "Launch your core features quickly to test your market assumptions."
+            },
+            "tech": {
+                "title": "Technical Excellence",
+                "description": "Built with scalable architecture that grows with your business."
+            },
+            "ownership": {
+                "title": "Complete Deliverable",
+                "description": "Receive full source code and documentation. No vendor lock-in."
+            }
+        },
+        "stats": {
+            "timeline": "Average Timeline",
+            "deliverables": "Core Deliverables",
+            "ownership": "Ownership",
+            "ownership_value": "100% Codebase",
+            "support": "Support",
+            "support_value": "Post-Launch"
+        }
+    },
+    "PortfolioDetail": {
+        "title": "Our Portfolio",
+        "subtitle": "Exploration of our latest work and engineering achievements.",
+        "categories": {
+            "all": "All",
+            "web": "Web",
+            "mobile": "Mobile",
+            "saas": "SaaS"
+        },
+        "projects": {
+            "fintech": {
+                "title": "Fintech Platform",
+                "description": "Full-stack banking solution with real-time analytics and secure transactions."
+            },
+            "ecommerce": {
+                "title": "E-commerce Mobile App",
+                "description": "Cross-platform shopping experience with AR product preview and seamless checkout."
+            },
+            "ai_manager": {
+                "title": "AI Project Manager",
+                "description": "AI-powered project management tool with intelligent task prioritization."
+            },
+            "delivery": {
+                "title": "Delivery Optimization",
+                "description": "Real-time route optimization for last-mile delivery logistics."
+            }
+        }
+    },
+    "About": {
+        "title": "About Cuvatex",
+        "subtitle": "We are a global team of engineers and designers dedicated to building high-quality digital products.",
+        "who": {
+            "title": "Who We Are",
+            "p1": "Cuvatex is a software development agency specializing in web and mobile applications for startups and growing businesses. We combine technical expertise with a deep understanding of product development to create solutions that drive real business value.",
+            "p2": "Founded on the principles of clarity, excellence, and partnership, we work closely with our clients to transform their vision into reality."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "description": "To empower businesses with scalable, high-performance digital solutions that accelerate growth and innovation."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description": "To become a trusted global technology partner for startups and companies building the next generation of digital products."
+        },
+        "values": {
+            "title": "Our Core Values",
+            "items": {
+                "client": {
+                    "title": "Client-Centric",
+                    "description": "Your success is our success. We build partnerships, not just projects."
+                },
+                "quality": {
+                    "title": "Quality Driven",
+                    "description": "We never compromise on code quality, design, or user experience."
+                },
+                "innovation": {
+                    "title": "Innovation Focused",
+                    "description": "We stay ahead of tech trends to deliver cutting-edge solutions."
+                }
+            }
+        },
+        "team": {
+            "title": "Meet Our Team",
+            "roles": {
+                "founding": "Software Engineer",
+                "designer": "Product Designer",
+                "dev": "Full Stack Developer"
+            }
+        }
+    },
+    "ServicesDetail": {
+        "title": "Our Engineering Expertise",
+        "subtitle": "We combine technical precision with creative strategy to build digital products that last.",
+        "web": {
+            "title": "Web Engineering",
+            "description": "We build scalable, high-performance web systems using Next.js and Cloud Native architectures.",
+            "features": [
+                "Cloud-Native Apps",
+                "Enterprise Portals",
+                "Real-time Dashboards"
+            ]
+        },
+        "mobile": {
+            "title": "Mobile Solutions",
+            "description": "Native-quality mobile experiences that engage users and drive conversions on iOS and Android.",
+            "features": [
+                "Cross-platform Apps",
+                "Mobile UX Excellence",
+                "Offline Capabilities"
+            ]
+        },
+        "mvp": {
+            "title": "MVP for Founders",
+            "description": "Go from concept to market-ready product in 6-8 weeks with our proven startup methodology.",
+            "features": [
+                "Product Discovery",
+                "Core Feature Build",
+                "Launch Strategy"
+            ]
+        },
+        "infrastructure": {
+            "title": "Core Infrastructure",
+            "items": {
+                "design": "UI/UX Design",
+                "cloud": "Cloud & DevOps",
+                "scalability": "Scalability",
+                "db": "PostgreSQL",
+                "security": "Security"
+            }
+        },
+        "learn_more": "Learn More"
+    },
+    "FAQPage": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions about our services and process."
+    },
+    "ProcessPage": {
+        "title": "Our Engineering Process",
+        "subtitle": "Transparency and precision in every step of our technical execution."
+    },
+    "ContactPage": {
+        "title": "Contact Us",
+        "subtitle": "Ready to start your next project? Reach out to us and let's discuss how we can help you scale your business."
+    },
+    "TechStack": {
+        "title": "Our Tech Stack",
+        "subtitle": "We use the best tools to build scalable and maintainable products.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend & Cloud",
+            "mobile": "Mobile"
+        }
+    },
+    "Testimonials": {
+        "title": "Client Success Stories",
+        "subtitle": "Don't just take our word for it. Here's what our partners say.",
+        "items": [
+            {
+                "quote": "Cuvatex delivered our MVP in record time. Their attention to detail and engineering quality is truly exceptional. We couldn't have asked for a better partner.",
+                "author": "Sarah Jenkins",
+                "position": "CEO at FintechFlow"
+            },
+            {
+                "quote": "The team at Cuvatex not only built a beautiful product but also provided invaluable strategic advice throughout the process. Highly recommended.",
+                "author": "Michael Chen",
+                "position": "Founder of HealthLink"
+            },
+            {
+                "quote": "Technical excellence combined with a deep understanding of product-market fit. They don't just write code; they build businesses.",
+                "author": "David Ross",
+                "position": "CTO at RetailPro"
+            },
+            {
+                "quote": "Working with Cuvatex was a game-changer for our startup. They are masters of modern web technologies and agile development.",
+                "author": "Elena Rodriguez",
+                "position": "Product Manager at EduTech"
+            }
+        ]
+    },
+    "WhyCuvatex": {
+        "title": "Why Choose Cuvatex?",
+        "subtitle": "We combine engineering precision with startup speed to deliver results.",
+        "items": [
+            {
+                "title": "Startup Speed",
+                "description": "We understand that time-to-market is everything. We move fast without breaking things."
+            },
+            {
+                "title": "Quality First",
+                "description": "We believe in writing clean, maintainable code that stands the test of time."
+            },
+            {
+                "title": "True Partnership",
+                "description": "We don't just work for you; we work with you as an extension of your team."
+            },
+            {
+                "title": "Modern Stack",
+                "description": "We use the latest technologies to ensure your product is cutting-edge."
+            }
+        ]
+    },
+    "CTA": {
+        "title": "Ready to build your masterpiece?",
+        "subtitle": "Let's turn your vision into a high-impact digital product.",
+        "button": "Start Your Project"
+    }
+}

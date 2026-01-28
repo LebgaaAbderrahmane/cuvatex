@@ -1,0 +1,444 @@
+{
+    "Index": {
+        "title": "Cuvatex – Agence de Développement Logiciel",
+        "description": "Cuvatex crée des produits numériques évolutifs et de haute qualité pour les startups et les entreprises.",
+        "hero": {
+            "badge": "Solutions Numériques de Nouvelle Génération",
+            "title_start": "Bâtir l'Avenir de l' ",
+            "title_highlight": "Ingénierie Numérique",
+            "subtitle": "Nous combinons précision technique et stratégie créative pour créer des produits de haute performance qui stimulent la croissance des entreprises.",
+            "cta_start": "Lancer Votre Projet",
+            "cta_explore": "Explorer le Portfolio"
+        }
+    },
+    "Navigation": {
+        "home": "Accueil",
+        "services": "Services",
+        "mvp": "MVP pour Startups",
+        "portfolio": "Portfolio",
+        "process": "Processus",
+        "pricing": "Tarifs",
+        "about": "À Propos",
+        "contact": "Contact"
+    },
+    "Theme": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Système"
+    },
+    "Statistics": {
+        "projects": "Projets",
+        "clients": "Clients Satisfaits",
+        "success": "Taux de Réussite",
+        "awards": "Prix Remportés"
+    },
+    "Services": {
+        "title": "Nos Services",
+        "subtitle": "Nous fournissons des solutions numériques de bout en bout pour les entreprises modernes.",
+        "web": {
+            "title": "Développement Web",
+            "description": "Applications web évolutives et performantes construites avec des frameworks modernes comme React et Next.js."
+        },
+        "mobile": {
+            "title": "Développement Mobile",
+            "description": "Applications mobiles natives et multiplateformes offrant des expériences utilisateur fluides sur iOS et Android."
+        },
+        "mvp": {
+            "title": "MVP pour Startups",
+            "description": "Transformez votre idée en un produit prêt pour la production en quelques semaines. Nous nous concentrons sur les fonctionnalités clés."
+        },
+        "design": {
+            "title": "Design de Produit",
+            "description": "Design UI/UX centré sur l'utilisateur qui combine esthétique et fonctionnalité sans effort."
+        },
+        "cloud": {
+            "title": "Infrastructure Cloud",
+            "description": "Faites évoluer votre application en toute simplicité grâce à notre configuration cloud robuste et nos pratiques DevOps."
+        },
+        "custom": {
+            "title": "Logiciel Sur Mesure",
+            "description": "Solutions logicielles personnalisées conçues pour résoudre vos défis commerciaux spécifiques."
+        }
+    },
+    "Projects": {
+        "title": "Projets Phares",
+        "subtitle": "Une sélection de nos derniers travaux aidant les startups et les entreprises à se développer.",
+        "view_all": "Voir Tous les Projets",
+        "cta": "Lire l'Étude de Cas",
+        "categories": {
+            "web": "Application Web",
+            "mobile": "Design & Dév Mobile",
+            "design": "Design de Produit",
+            "fullstack": "Dév Full Stack"
+        },
+        "items": {
+            "fintech": {
+                "title": "Redesign de Plateforme Fintech",
+                "description": "Une refonte complète d'un tableau de bord bancaire axée sur le flux utilisateur et la performance."
+            },
+            "healthcare": {
+                "title": "Application Mobile de Santé",
+                "description": "Une application mobile centrée sur le patient pour la gestion des rendez-vous et des dossiers de santé numériques."
+            },
+            "ai": {
+                "title": "Tableau de Bord SaaS IA",
+                "description": "Plateforme de visualisation de données en temps réel pour une entreprise de logistique propulsée par l'IA."
+            },
+            "elearning": {
+                "title": "Expérience d'E-learning",
+                "description": "Un portail d'apprentissage interactif avec des fonctionnalités de collaboration en temps réel pour les étudiants du monde entier."
+            }
+        }
+    },
+    "Process": {
+        "title": "Notre Processus",
+        "subtitle": "Comment nous transformons vos idées en produits numériques de haute qualité.",
+        "step": "Étape",
+        "steps": {
+            "discovery": {
+                "title": "Découverte & Stratégie",
+                "description": "Nous plongeons dans vos objectifs commerciaux, votre public cible et vos besoins techniques pour définir la route du succès."
+            },
+            "design": {
+                "title": "Design & UX",
+                "description": "Nos designers créent des maquettes intuitives et de haute fidélité axées sur l'expérience utilisateur et l'identité de marque."
+            },
+            "development": {
+                "title": "Développement",
+                "description": "Nous construisons votre produit avec des technologies modernes et évolutives, avec des boucles de rétroaction constantes et une méthodologie agile."
+            },
+            "testing": {
+                "title": "Tests & QA",
+                "description": "Tests rigoureux sur tous les appareils et navigateurs pour garantir un produit sans bug, performant et sécurisé."
+            },
+            "deployment": {
+                "title": "Déploiement & Support",
+                "description": "Nous gérons le lancement en production et fournissons un support continu pour assurer que votre produit évolue avec votre entreprise."
+            }
+        }
+    },
+    "Pricing": {
+        "title": "Tarification Transparente",
+        "subtitle": "Des options flexibles adaptées à la portée et à la complexité de votre projet.",
+        "popular": "Plus Populaire",
+        "cta": "Commencer",
+        "plans": {
+            "mvp": {
+                "name": "Développement MVP",
+                "price": "À partir de 5k$",
+                "description": "Parfait pour les startups cherchant à valider rapidement leur idée de base.",
+                "features": [
+                    "Développement de fonctionnalités de base",
+                    "Design UI/UX",
+                    "Déploiement",
+                    "2 semaines de support"
+                ]
+            },
+            "custom": {
+                "name": "Produit Sur Mesure",
+                "price": "Tarification Personnalisée",
+                "description": "Développement de bout en bout pour les entreprises étendant leur présence numérique.",
+                "features": [
+                    "Développement à pleine échelle",
+                    "UI/UX Avancé",
+                    "Configuration d'infrastructure",
+                    "Focus évolutivité",
+                    "1 mois de support"
+                ]
+            },
+            "retainer": {
+                "name": "Forfait Mensuel",
+                "price": "2k$ / mois",
+                "description": "Développement et maintenance continus pour les entreprises en croissance.",
+                "features": [
+                    "Support prioritaire",
+                    "Mises à jour mensuelles",
+                    "Surveillance d'infrastructure",
+                    "Audits de sécurité"
+                ]
+            }
+        }
+    },
+    "FAQ": {
+        "title": "Foire Aux Questions",
+        "subtitle": "Tout ce que vous devez savoir sur la collaboration avec nous.",
+        "items": [
+            {
+                "question": "Quel est votre délai de projet typique ?",
+                "answer": "Un projet de développement MVP typique prend entre 4 et 8 semaines, selon la complexité des fonctionnalités de base. Nous privilégions la rapidité de mise sur le marché tout en maintenant des standards d'ingénierie élevés."
+            },
+            {
+                "question": "Offrez-vous un support post-lancement ?",
+                "answer": "Oui, nous proposons divers forfaits de support allant de la maintenance hebdomadaire aux forfaits mensuels dédiés pour garantir que votre produit continue d'évoluer efficacement."
+            },
+            {
+                "question": "Dans quelles technologies vous spécialisez-vous ?",
+                "answer": "Nous nous spécialisons dans les frameworks JavaScript modernes (React, Next.js, Node.js), le développement mobile (React Native, Flutter) et les infrastructures cloud robustes (AWS, Docker)."
+            },
+            {
+                "question": "Comment gérez-vous la gestion de projet ?",
+                "answer": "Nous utilisons la méthodologie agile avec des sprints hebdomadaires et une communication transparente. Vous aurez un accès régulier aux démos et aux rapports de progression via des canaux dédiés."
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Construisons quelque chose d'incroyable ensemble",
+        "subtitle": "Prêt à lancer votre prochain projet ? Contactez-nous pour discuter de la façon dont nous pouvons vous aider à développer votre entreprise.",
+        "whatsapp": {
+            "title": "Chat WhatsApp",
+            "subtitle": "Temps de réponse le plus rapide",
+            "cta": "Contacter via WhatsApp",
+            "note": "Répond généralement en moins de 2 heures pendant les heures de bureau."
+        },
+        "email": {
+            "title": "Écrivez-nous",
+            "subtitle": "hello@cuvatex.com",
+            "cta": "Envoyez-nous un message",
+            "label": "Vous préférez l'email ?"
+        },
+        "location": {
+            "title": "Localisation",
+            "subtitle": "Agence en Télétravail Complet"
+        },
+        "cta_box": {
+            "title": "Démarrer une conversation",
+            "description": "La plupart des projets commencent par un simple chat. Nous sommes disponibles sur WhatsApp pour discuter de vos besoins en temps réel."
+        }
+    },
+    "Footer": {
+        "tagline": "Bâtir la prochaine génération de produits numériques avec l'excellence en ingénierie.",
+        "columns": {
+            "services": "Nos Services",
+            "company": "Entreprise",
+            "support": "Support",
+            "contact": "Contact"
+        },
+        "links": {
+            "services": "Nos Services",
+            "mvp": "Développement MVP",
+            "process": "Notre Processus",
+            "faq": "FAQ",
+            "legal": "Conditions d'Utilisation",
+            "privacy": "Politique de Confidentialité",
+            "whatsapp": "Chat WhatsApp",
+            "email": "Support par Email"
+        },
+        "rights": "Cuvatex. Tous droits réservés."
+    },
+    "MVP": {
+        "title": "Construisez votre MVP avec rapidité et précision",
+        "subtitle": "Nous aidons les startups à lancer leurs produits en quelques semaines, pas des mois. Concentrez-vous sur votre business, nous gérons la technique.",
+        "timeline": "4-8 Semaines",
+        "deliverables": "Produit Complet",
+        "cta": "Obtenir un Devis pour votre MVP",
+        "benefits": {
+            "title": "Pourquoi choisir Cuvatex pour votre MVP ?",
+            "rapid": {
+                "title": "Entrée Rapide sur le Marché",
+                "description": "Lancez vos fonctionnalités de base rapidement pour tester vos hypothèses de marché."
+            },
+            "tech": {
+                "title": "Excellence Technique",
+                "description": "Construit avec une architecture évolutive qui grandit avec votre entreprise."
+            },
+            "ownership": {
+                "title": "Livrable Complet",
+                "description": "Recevez le code source complet et la documentation. Pas de dépendance vis-à-vis du fournisseur."
+            }
+        },
+        "stats": {
+            "timeline": "Délai Moyen",
+            "deliverables": "Livrables de Base",
+            "ownership": "Propriété",
+            "ownership_value": "100% du Code",
+            "support": "Support",
+            "support_value": "Post-Lancement"
+        }
+    },
+    "PortfolioDetail": {
+        "title": "Notre Portfolio",
+        "subtitle": "Exploration de nos derniers travaux et réalisations techniques.",
+        "categories": {
+            "all": "Tous",
+            "web": "Web",
+            "mobile": "Mobile",
+            "saas": "SaaS"
+        },
+        "projects": {
+            "fintech": {
+                "title": "Plateforme Fintech",
+                "description": "Solution bancaire full-stack avec analyses en temps réel et transactions sécurisées."
+            },
+            "ecommerce": {
+                "title": "App Mobile E-commerce",
+                "description": "Expérience d'achat multiplateforme avec aperçu de produit en RA et paiement fluide."
+            },
+            "ai_manager": {
+                "title": "Gestionnaire de Projet IA",
+                "description": "Outil de gestion de projet propulsé par l'IA avec priorisation intelligente des tâches."
+            },
+            "delivery": {
+                "title": "Optimisation de Livraison",
+                "description": "Optimisation d'itinéraire en temps réel pour la logistique de livraison du dernier kilomètre."
+            }
+        }
+    },
+    "About": {
+        "title": "À Propos de Cuvatex",
+        "subtitle": "Nous sommes une équipe mondiale d'ingénieurs et de designers dédiés à la création de produits numériques de haute qualité.",
+        "who": {
+            "title": "Qui Nous Sommes",
+            "p1": "Cuvatex est une agence de développement logiciel spécialisée dans les applications web et mobiles pour les startups et les entreprises en pleine croissance. Nous combinons l'expertise technique avec une compréhension profonde du développement de produits pour créer des solutions qui apportent une réelle valeur commerciale.",
+            "p2": "Fondée sur les principes de clarté, d'excellence et de partenariat, nous travaillons en étroite collaboration avec nos clients pour transformer leur vision en réalité."
+        },
+        "mission": {
+            "title": "Notre Mission",
+            "description": "Donner aux entreprises les moyens de disposer de solutions numériques évolutives et performantes qui accélèrent la croissance et l'innovation."
+        },
+        "vision": {
+            "title": "Notre Vision",
+            "description": "Devenir un partenaire technologique mondial de confiance pour les startups et les entreprises qui construisent la prochaine génération de produits numériques."
+        },
+        "values": {
+            "title": "Nos Valeurs Fondamentales",
+            "items": {
+                "client": {
+                    "title": "Centré sur le Client",
+                    "description": "Votre succès est notre succès. Nous construisons des partenariats, pas seulement des projets."
+                },
+                "quality": {
+                    "title": "Axé sur la Qualité",
+                    "description": "Nous ne compromettons jamais la qualité du code, le design ou l'expérience utilisateur."
+                },
+                "innovation": {
+                    "title": "Orienté Innovation",
+                    "description": "Nous restons à la pointe des tendances technologiques pour proposer des solutions de pointe."
+                }
+            }
+        },
+        "team": {
+            "title": "Rencontrez Notre Équipe",
+            "roles": {
+                "founding": "Ingénieur Logiciel",
+                "designer": "Product Designer",
+                "dev": "Développeur Full Stack"
+            }
+        }
+    },
+    "ServicesDetail": {
+        "title": "Notre Expertise en Ingénierie",
+        "subtitle": "Nous combinons précision technique et stratégie créative pour construire des produits numériques durables.",
+        "web": {
+            "title": "Ingénierie Web",
+            "description": "Nous construisons des systèmes web évolutifs et performants en utilisant Next.js et des architectures Cloud Native.",
+            "features": [
+                "Applications Cloud-Native",
+                "Portails d'Entreprise",
+                "Tableaux de bord en temps réel"
+            ]
+        },
+        "mobile": {
+            "title": "Solutions Mobiles",
+            "description": "Des expériences mobiles de qualité native qui engagent les utilisateurs et stimulent les conversions sur iOS et Android.",
+            "features": [
+                "Applications multiplateformes",
+                "Excellence UX mobile",
+                "Capacités hors ligne"
+            ]
+        },
+        "mvp": {
+            "title": "MVP pour Fondateurs",
+            "description": "Passez du concept au produit prêt pour le marché en 6-8 semaines grâce à notre méthodologie éprouvée pour les startups.",
+            "features": [
+                "Découverte de Produit",
+                "Construction des Fonctions Clés",
+                "Stratégie de Lancement"
+            ]
+        },
+        "infrastructure": {
+            "title": "Infrastructure de Base",
+            "items": {
+                "design": "Design UI/UX",
+                "cloud": "Cloud & DevOps",
+                "scalability": "Évolutivité",
+                "db": "PostgreSQL",
+                "security": "Sécurité"
+            }
+        },
+        "learn_more": "En savoir plus"
+    },
+    "FAQPage": {
+        "title": "Foire Aux Questions",
+        "subtitle": "Trouvez des réponses aux questions courantes sur nos services et notre processus."
+    },
+    "ProcessPage": {
+        "title": "Notre Processus d'Ingénierie",
+        "subtitle": "Transparence et précision à chaque étape de notre exécution technique."
+    },
+    "ContactPage": {
+        "title": "Contactez-nous",
+        "subtitle": "Prêt à lancer votre prochain projet ? Contactez-nous pour discuter de la façon dont nous pouvons vous aider à développer votre entreprise."
+    },
+    "TechStack": {
+        "title": "Notre Stack Technique",
+        "subtitle": "Nous utilisons les meilleurs outils pour construire des produits évolutifs et maintenables.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend & Cloud",
+            "mobile": "Mobile"
+        }
+    },
+    "Testimonials": {
+        "title": "Histoires de Réussite Clients",
+        "subtitle": "Ne vous contentez pas de nous croire sur parole. Voici ce que disent nos partenaires.",
+        "items": [
+            {
+                "quote": "Cuvatex a livré notre MVP en un temps record. Leur attention aux détails et la qualité de leur ingénierie sont vraiment exceptionnelles. Nous n'aurions pas pu rêver d'un meilleur partenaire.",
+                "author": "Sarah Jenkins",
+                "position": "CEO chez FintechFlow"
+            },
+            {
+                "quote": "L'équipe de Cuvatex a non seulement construit un produit magnifique, mais a également fourni des conseils stratégiques précieux tout au long du processus. Hautement recommandé.",
+                "author": "Michael Chen",
+                "position": "Fondateur de HealthLink"
+            },
+            {
+                "quote": "L'excellence technique combinée à une compréhension profonde de l'adéquation produit-marché. Ils ne se contentent pas d'écrire du code ; ils construisent des entreprises.",
+                "author": "David Ross",
+                "position": "CTO chez RetailPro"
+            },
+            {
+                "quote": "Travailler avec Cuvatex a changé la donne pour notre startup. Ce sont des experts des technologies web modernes et du développement agile.",
+                "author": "Elena Rodriguez",
+                "position": "Chef de Produit chez EduTech"
+            }
+        ]
+    },
+    "WhyCuvatex": {
+        "title": "Pourquoi Choisir Cuvatex ?",
+        "subtitle": "Nous combinons la précision de l'ingénierie avec la rapidité des startups pour livrer des résultats.",
+        "items": [
+            {
+                "title": "Vitesse Startup",
+                "description": "Nous comprenons que le délai de mise sur le marché est primordial. Nous avançons vite sans rien casser."
+            },
+            {
+                "title": "Qualité d'Abord",
+                "description": "Nous croyons en l'écriture d'un code propre et maintenable qui résiste à l'épreuve du temps."
+            },
+            {
+                "title": "Véritable Partenariat",
+                "description": "Nous ne travaillons pas seulement pour vous ; nous travaillons avec vous comme une extension de votre équipe."
+            },
+            {
+                "title": "Stack Moderne",
+                "description": "Nous utilisons les dernières technologies pour garantir que votre produit est à la pointe."
+            }
+        ]
+    },
+    "CTA": {
+        "title": "Prêt à construire votre chef-d'œuvre ?",
+        "subtitle": "Transformons votre vision en un produit numérique à fort impact.",
+        "button": "Lancez Votre Projet"
+    }
+}
