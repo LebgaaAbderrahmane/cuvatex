@@ -53,32 +53,74 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning className="js-loading">
       <head>
+        {/* ===== DISCORD / OPEN GRAPH (STATIC, ROOT) ===== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cuvatex" />
+        <meta
+          property="og:title"
+          content="Cuvatex – Next-Gen Software Development Agency"
+        />
+        <meta
+          property="og:description"
+          content="Bespoke digital solutions for startups and enterprises."
+        />
+        <meta
+          property="og:url"
+          content="https://cuvatex.netlify.app/"
+        />
+        <meta
+          property="og:image"
+          content="https://cuvatex.netlify.app/og-image.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* ===== TWITTER (DISCORD READS THIS TOO) ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Cuvatex – Next-Gen Software Development Agency"
+        />
+        <meta
+          name="twitter:description"
+          content="Bespoke digital solutions for startups and enterprises."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cuvatex.netlify.app/og-image.jpg"
+        />
+
+        {/* ===== YOUR THEME SCRIPT (KEEP) ===== */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                var theme = localStorage.getItem('theme');
-                var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                var selectedTheme = theme || 'system';
-                var activeTheme = selectedTheme === 'system' ? systemTheme : selectedTheme;
-                document.documentElement.setAttribute('data-theme', activeTheme);
-                document.documentElement.classList.add('js-loading');
-              })();
-            `,
+        (function() {
+          var theme = localStorage.getItem('theme');
+          var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          var selectedTheme = theme || 'system';
+          var activeTheme = selectedTheme === 'system' ? systemTheme : selectedTheme;
+          document.documentElement.setAttribute('data-theme', activeTheme);
+          document.documentElement.classList.add('js-loading');
+        })();
+      `,
           }}
         />
+
         <style
           dangerouslySetInnerHTML={{
             __html: `
-               .js-loading body { overflow: hidden !important; }
-               .js-loading #main-content, .js-loading nav, .js-loading footer { 
-                 opacity: 0 !important; 
-                 visibility: hidden !important; 
-               }
-             `
+        .js-loading body { overflow: hidden !important; }
+        .js-loading #main-content,
+        .js-loading nav,
+        .js-loading footer {
+          opacity: 0 !important;
+          visibility: hidden !important;
+        }
+      `,
           }}
         />
       </head>
+
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
