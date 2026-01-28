@@ -1,38 +1,34 @@
 import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+const siteUrl = 'https://cuvatex.netlify.app';
 
 export const metadata: Metadata = {
-  title: 'Cuvatex – Next-Gen Software Development Agency',
-  description: 'Cuvatex builds scalable, high-performance digital products. We specialize in Web Development, Mobile Apps, and MVP for startups with a focus on engineering excellence.',
-  metadataBase: new URL('https://cuvatex.netlify.app'), // Replace with your actual domain
+  metadataBase: new URL(siteUrl),
+
   openGraph: {
     title: 'Cuvatex – Next-Gen Software Development Agency',
     description: 'Bespoke digital solutions for startups and enterprises.',
-    url: 'https://cuvatex.netlify.app',
+    url: siteUrl,
     siteName: 'Cuvatex',
     images: [
       {
-        url: '/og-image.jpg', // Place this file in your public folder
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Cuvatex Branding',
       },
     ],
-    locale: 'en_US',
     type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Cuvatex – Next-Gen Software Development Agency',
     description: 'Bespoke digital solutions for startups and enterprises.',
-    images: ['/og-image.jpg'],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    images: [`${siteUrl}/og-image.jpg`],
   },
 };
+
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
