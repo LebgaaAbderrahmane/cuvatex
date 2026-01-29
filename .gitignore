@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+PRD.md
+Surah.md
+walkthrough.md.resolved
+implementation_plan.md.resolved
 # dependencies
 /node_modules
 /.pnp
