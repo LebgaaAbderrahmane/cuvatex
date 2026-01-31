@@ -23,10 +23,6 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero-background-pattern">
-          <Spotlight />
-          <div className="gradient-sphere" />
-          <div className="gradient-sphere-2" />
-
           <div className="floating-elements">
             <div className="float-item item-1"><Code size={40} /></div>
             <div className="float-item item-2"><Cpu size={32} /></div>

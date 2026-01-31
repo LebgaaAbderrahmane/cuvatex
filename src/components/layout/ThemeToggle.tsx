@@ -5,7 +5,12 @@ import { useTranslations } from 'next-intl';
 import { SunMoon, Laptop, ChevronDown, Sun, Moon, Palette } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+  showLabel?: boolean;
+  up?: boolean;
+}
+
+export default function ThemeToggle({ showLabel = false, up = false }: ThemeToggleProps) {
   const t = useTranslations('Theme');
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -48,12 +53,13 @@ export default function ThemeToggle() {
       >
         <div className="current-icon">
           <Palette size={18} />
+          {showLabel && <span className="theme-label">{currentThemeOption.label}</span>}
         </div>
         <ChevronDown size={14} className={`chevron ${isOpen ? 'rotate' : ''}`} />
       </button>
 
       {isOpen && (
-        <div className="theme-menu">
+        <div className={`theme-menu ${up ? 'drop-up' : ''}`}>
           {themeOptions.map((opt) => (
             <button
               key={opt.id}
@@ -102,8 +108,14 @@ export default function ThemeToggle() {
                 .current-icon {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    gap: 8px;
                     color: var(--primary);
+                }
+
+                .theme-label {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: var(--accent-1);
                 }
 
                 .chevron {
@@ -134,6 +146,17 @@ export default function ThemeToggle() {
 
                 @keyframes slideDown {
                     from { opacity: 0; transform: translateY(-10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                .theme-menu.drop-up {
+                    top: auto;
+                    bottom: calc(100% + 8px);
+                    animation: slideUp 0.2s ease-out;
+                }
+
+                @keyframes slideUp {
+                    from { opacity: 0; transform: translateY(10px); }
                     to { opacity: 1; transform: translateY(0); }
                 }
 

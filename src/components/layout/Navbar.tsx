@@ -72,6 +72,9 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Menu Backdrop */}
+      <div className={`mobile-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)} />
+
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-nav-list">
@@ -90,8 +93,8 @@ export default function Navbar() {
         </div>
         <div className="mobile-footer">
           <div className="mobile-utils">
-            <ThemeToggle />
-            <LocaleSwitcher />
+            <ThemeToggle showLabel up />
+            <LocaleSwitcher up />
           </div>
           <Link href="/contact" className="btn btn-primary full-width" onClick={() => setIsOpen(false)}>
             {t('contact')}
@@ -116,10 +119,28 @@ export default function Navbar() {
 
         .navbar.scrolled {
           background: rgba(var(--background-rgb, 255, 255, 255), 0.96);
+          /* Original blur for navbar */
           backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(20px);
           box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
           border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          z-index: 1999;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.4s ease;
+        }
+
+        .mobile-overlay.open {
+          opacity: 1;
+          visibility: visible;
         }
 
         .nav-container {
@@ -217,7 +238,7 @@ export default function Navbar() {
         .mobile-toggle {
           display: none;
           color: var(--accent-1);
-          z-index: 1001;
+          z-index: 2001; /* Higher than menu */
           width: 44px;
           height: 44px;
           align-items: center;
@@ -233,17 +254,20 @@ export default function Navbar() {
         .mobile-menu {
           position: fixed;
           top: 0;
-          right: -100%;
-          width: 100%;
-          max-width: 320px;
+          right: -70%;
+          width: 70%;
+          max-width: 380px;
           height: 100vh;
           background: var(--background);
-          z-index: 999;
+          z-index: 2000;
           transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-          padding: 100px 32px 40px;
+          padding: 80px 20px 120px;
           display: flex;
           flex-direction: column;
-          box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+          box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15);
+          overflow-y: auto;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
         }
 
         .mobile-menu.open {
@@ -253,7 +277,8 @@ export default function Navbar() {
         .mobile-nav-list {
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 20px;
+          margin-bottom: 40px;
         }
 
         .mobile-nav-link {
@@ -280,15 +305,28 @@ export default function Navbar() {
           margin-top: auto;
           display: flex;
           flex-direction: column;
-          gap: 32px;
+          gap: 20px;
+          padding: 32px 0;
+          border-top: 1px solid var(--border);
+          flex-shrink: 0;
         }
 
         .mobile-utils {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          padding-top: 32px;
-          border-top: 1px solid var(--border);
+          gap: 12px;
+          width: 100%;
+        }
+
+        :global(.mobile-utils > div) {
+          width: 100% !important;
+        }
+
+        :global(.mobile-utils .locale-trigger),
+        :global(.mobile-utils .theme-toggle-btn) {
+          flex: 1;
+          justify-content: space-between !important;
+          height: 44px !important;
         }
 
         .full-width {
