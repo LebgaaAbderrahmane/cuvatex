@@ -12,7 +12,6 @@ import TechStack from '@/components/sections/TechStack';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
 import StatisticsSection from '@/components/sections/StatisticsSection';
-import Spotlight from '@/components/ui/Spotlight';
 
 export default function Home() {
   const t = useTranslations('Index');

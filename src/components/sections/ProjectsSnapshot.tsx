@@ -81,7 +81,7 @@ export default function ProjectsSnapshot() {
 
       <style jsx>{`
         .projects-snapshot {
-          background: var(--background);
+          background: transparent;
           padding-bottom: 100px;
         }
 

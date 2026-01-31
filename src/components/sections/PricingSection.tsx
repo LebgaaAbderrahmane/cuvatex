@@ -65,7 +65,7 @@ export default function PricingSection() {
 
       <style jsx>{`
         .pricing-section {
-          background: var(--background);
+          background: transparent;
         }
 
         .section-header {

@@ -61,8 +61,14 @@ export default function ServicesPreview() {
 
       <style jsx>{`
         .services-preview {
-          background: var(--background);
+          background: transparent;
           padding-bottom: 120px;
+        }
+
+        @media (max-width: 767px) {
+          .services-preview {
+            padding-bottom: 60px;
+          }
         }
         
         .section-header {
