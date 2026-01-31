@@ -4,39 +4,39 @@ import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react'
 
 export default function ScrollToTop() {
-    const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true)
-            } else {
-                setIsVisible(false)
-            }
-        }
-
-        window.addEventListener('scroll', toggleVisibility)
-        return () => window.removeEventListener('scroll', toggleVisibility)
-    }, [])
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
     }
 
-    return (
-        <>
-            <button
-                onClick={scrollToTop}
-                className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
-                aria-label="Scroll to top"
-            >
-                <ArrowUp size={20} />
-            </button>
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
 
-            <style jsx>{`
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  return (
+    <>
+      <button
+        onClick={scrollToTop}
+        className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp size={20} />
+      </button>
+
+      <style jsx>{`
         .scroll-to-top {
           position: fixed;
           bottom: 24px;
@@ -55,7 +55,7 @@ export default function ScrollToTop() {
           visibility: hidden;
           transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, background 0.2s ease;
           box-shadow: 0 4px 12px rgba(9, 82, 76, 0.3);
-          z-index: 1000;
+          z-index: 900;
         }
 
         .scroll-to-top.visible {
@@ -83,6 +83,6 @@ export default function ScrollToTop() {
           }
         }
       `}</style>
-        </>
-    )
+    </>
+  )
 }

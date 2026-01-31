@@ -73,7 +73,7 @@ export default function ContactSection() {
 
       <style jsx>{`
         .contact-section {
-          background: var(--background);
+          background: transparent;
           padding-bottom: 120px;
         }
 

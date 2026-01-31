@@ -87,6 +87,10 @@
             "elearning": {
                 "title": "Expérience d'E-learning",
                 "description": "Un portail d'apprentissage interactif avec des fonctionnalités de collaboration en temps réel pour les étudiants du monde entier."
+            },
+            "surah": {
+                "title": "Surah – Audio du Coran Minimaliste",
+                "description": "Une application React Native multiplateforme pour créer et écouter des bibliothèques du Coran hors ligne."
             }
         }
     },
@@ -280,6 +284,10 @@
             "delivery": {
                 "title": "Optimisation de Livraison",
                 "description": "Optimisation d'itinéraire en temps réel pour la logistique de livraison du dernier kilomètre."
+            },
+            "surah": {
+                "title": "Application Surah",
+                "description": "Plateforme audio du Coran minimaliste et hors ligne pour les bibliothèques de récitation personnelles."
             }
         }
     },
@@ -440,5 +448,21 @@
         "title": "Prêt à construire votre chef-d'œuvre ?",
         "subtitle": "Transformons votre vision en un produit numérique à fort impact.",
         "button": "Lancez Votre Projet"
+    },
+    "StudyCase": {
+        "back": "Retour au Portfolio",
+        "cta": {
+            "title": "Intéressé par un produit similaire ?",
+            "subtitle": "Nous pouvons vous aider à construire des applications performantes et minimalistes avec précision.",
+            "button": "Lancer un Projet"
+        },
+        "sections": {
+            "overview": "Aperçu du Projet",
+            "problem": "Le Problème",
+            "tech": "Stack Technique Core",
+            "features": "Fonctionnalités Clés",
+            "journey": "Le Parcours d'Ingénierie",
+            "deliverables": "Exigences Fonctionnelles Remplies"
+        }
     }
 }

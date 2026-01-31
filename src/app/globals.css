@@ -273,7 +273,8 @@ button {
   color: #FFFFFF;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary.is-centered {
   background: var(--primary-light);
   transform: translateY(-1px);
 }
@@ -288,7 +289,8 @@ button {
   color: var(--primary);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary.is-centered {
   background: var(--surface);
   transform: translateY(-1px);
 }
@@ -315,7 +317,8 @@ button {
   transition: transform 0.2s ease;
 }
 
-.btn-tertiary:hover::after {
+.btn-tertiary:hover::after,
+.btn-tertiary.is-centered::after {
   transform: scaleX(1);
 }
 
@@ -325,7 +328,8 @@ button {
   border: none;
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp:hover,
+.btn-whatsapp.is-centered {
   background: #128C7E;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
@@ -377,9 +381,63 @@ button {
   transition: var(--transition-default);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+/* Support for automatic hover effect on scroll */
+.card:hover,
+.card.is-centered,
+.testimonial-card:hover,
+.testimonial-card.is-centered,
+.stat-card:hover,
+.stat-card.is-centered,
+.pricing-card:hover,
+.pricing-card.is-centered,
+.service-card:hover,
+.service-card.is-centered {
+  transform: translateY(-8px) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 12px 24px rgba(var(--primary-rgb), 0.1) !important;
+}
+
+.timeline-item:hover .timeline-icon-box,
+.timeline-item.is-centered .timeline-icon-box {
+  background: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary) !important;
+  transform: scale(1.1) !important;
+}
+
+.timeline-item:hover .timeline-content,
+.timeline-item.is-centered .timeline-content {
+  border-color: var(--primary) !important;
+  transform: translateX(8px) !important;
+}
+
+.btn-primary:hover,
+.btn-primary.is-centered {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:hover,
+.btn-secondary.is-centered {
+  background: var(--surface);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover,
+.nav-link.is-centered,
+.nav-link[aria-current="page"] {
+  color: var(--primary) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.is-centered::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-centered {
+  color: var(--primary);
 }
 
 /* Project Cards */

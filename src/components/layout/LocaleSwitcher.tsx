@@ -11,7 +11,11 @@ const languages = [
   { code: 'ar', label: 'العربية', flag: '🇸🇦' }
 ];
 
-export default function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+  up?: boolean;
+}
+
+export default function LocaleSwitcher({ up = false }: LocaleSwitcherProps) {
   const t = useTranslations('Navigation');
   const locale = useLocale();
   const router = useRouter();
@@ -58,7 +62,7 @@ export default function LocaleSwitcher() {
         <ChevronDown size={14} className={`chevron ${isOpen ? 'rotate' : ''}`} />
       </button>
 
-      <div className={`locale-dropdown ${isOpen ? 'open' : ''}`}>
+      <div className={`locale-dropdown ${isOpen ? 'open' : ''} ${up ? 'drop-up' : ''}`}>
         {languages.map((lang) => (
           <button
             key={lang.code}
@@ -146,6 +150,16 @@ export default function LocaleSwitcher() {
           transform: translateY(0);
         }
 
+        .locale-dropdown.drop-up {
+          top: auto;
+          bottom: calc(100% + 8px);
+          transform: translateY(10px);
+        }
+
+        .locale-dropdown.drop-up.open {
+          transform: translateY(0);
+        }
+
         .locale-option {
           display: flex;
           align-items: center;
@@ -181,12 +195,12 @@ export default function LocaleSwitcher() {
           color: var(--primary);
         }
 
-        @media (max-width: 1023px) {
-          .locale-dropdown {
-            left: 0;
-            right: auto;
-          }
-        }
+        // @media (max-width: 1023px) {
+        //   .locale-dropdown {
+        //     left: 0;
+        //     right: auto;
+        //   }
+        // }
       `}</style>
     </div>
   );

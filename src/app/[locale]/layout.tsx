@@ -36,6 +36,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import LoadingScreen from '@/components/ui/LoadingScreen';
+import Spotlight from '@/components/ui/Spotlight';
+import ScrollHoverObserver from '@/components/ui/ScrollHoverObserver';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import "../globals.css";
 
@@ -48,7 +50,8 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   const messages = await getMessages();
-  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  // Keep layout LTR even for Arabic as requested
+  const dir = 'ltr';
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning className="js-loading">
@@ -92,31 +95,73 @@ export default async function RootLayout({
 
         {/* ===== YOUR THEME SCRIPT (KEEP) ===== */}
         <script
+          id="theme-strategy-script"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
         (function() {
-          var theme = localStorage.getItem('theme');
-          var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-          var selectedTheme = theme || 'system';
-          var activeTheme = selectedTheme === 'system' ? systemTheme : selectedTheme;
-          document.documentElement.setAttribute('data-theme', activeTheme);
-          document.documentElement.classList.add('js-loading');
+          try {
+            var theme = localStorage.getItem('theme');
+            var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            var selectedTheme = theme || 'system';
+            var activeTheme = selectedTheme === 'system' ? systemTheme : selectedTheme;
+            document.documentElement.setAttribute('data-theme', activeTheme);
+            document.documentElement.classList.add('js-loading');
+          } catch (e) {}
         })();
       `,
           }}
         />
 
+        {/* ===== CRITICAL STYLES ===== */}
         <style
+          id="critical-path-styles"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: `
-        .js-loading body { overflow: hidden !important; }
+            __html: `.js-loading body { overflow: hidden !important; }
         .js-loading #main-content,
         .js-loading nav,
         .js-loading footer {
           opacity: 0 !important;
           visibility: hidden !important;
         }
-      `,
+        .global-glow-container {
+          position: fixed;
+          inset: 0;
+          z-index: -1;
+          pointer-events: none;
+          overflow: hidden;
+        }
+        .global-gradient-sphere {
+          position: absolute;
+          top: -10%;
+          right: -10%;
+          width: 70%;
+          height: 70%;
+          background: radial-gradient(circle, rgba(9, 82, 76, 0.08) 0%, transparent 70%);
+          border-radius: 50%;
+          filter: blur(80px);
+        }
+        .global-gradient-sphere-2 {
+          position: absolute;
+          bottom: -10%;
+          left: -10%;
+          width: 60%;
+          height: 60%;
+          background: radial-gradient(circle, rgba(9, 82, 76, 0.05) 0%, transparent 70%);
+          border-radius: 50%;
+          filter: blur(100px);
+        }
+        section, footer, nav {
+          position: relative;
+          z-index: 10;
+        }
+        .hero {
+          background: transparent !important;
+        }
+        * {
+          box-sizing: border-box;
+        }`,
           }}
         />
       </head>
@@ -124,6 +169,11 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+            <div className="global-glow-container">
+              <Spotlight color="rgba(9, 82, 76, 0.1)" />
+              <div className="global-gradient-sphere" />
+              <div className="global-gradient-sphere-2" />
+            </div>
             <LoadingScreen />
             <Navbar />
             <div id="main-content">
@@ -131,6 +181,7 @@ export default async function RootLayout({
             </div>
             <Footer />
             <ScrollToTop />
+            <ScrollHoverObserver />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

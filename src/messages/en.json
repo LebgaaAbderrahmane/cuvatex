@@ -87,6 +87,10 @@
             "elearning": {
                 "title": "E-learning Experience",
                 "description": "An interactive learning portal with real-time collaboration features for students worldwide."
+            },
+            "surah": {
+                "title": "Surah – Minimalist Quran Audio",
+                "description": "A cross-platform React Native app for building and listening to offline Quran libraries."
             }
         }
     },
@@ -280,6 +284,10 @@
             "delivery": {
                 "title": "Delivery Optimization",
                 "description": "Real-time route optimization for last-mile delivery logistics."
+            },
+            "surah": {
+                "title": "Surah App",
+                "description": "Minimalist, offline-first Quran audio platform for personal recitation libraries."
             }
         }
     },
@@ -440,5 +448,21 @@
         "title": "Ready to build your masterpiece?",
         "subtitle": "Let's turn your vision into a high-impact digital product.",
         "button": "Start Your Project"
+    },
+    "StudyCase": {
+        "back": "Back to Portfolio",
+        "cta": {
+            "title": "Interested in a similar product?",
+            "subtitle": "We can help you build high-performance, minimalist applications with precision.",
+            "button": "Start a Project"
+        },
+        "sections": {
+            "overview": "Project Overview",
+            "problem": "The Problem",
+            "tech": "Core Tech Stack",
+            "features": "Core Features",
+            "journey": "The Engineering Journey",
+            "deliverables": "Functional Requirements Met"
+        }
     }
 }

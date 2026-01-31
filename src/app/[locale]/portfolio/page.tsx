@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 import InnerHero from '@/components/sections/InnerHero';
 
 export default function PortfolioPage() {
@@ -42,6 +43,14 @@ export default function PortfolioPage() {
       description: t('projects.delivery.description'),
       tech: "Flutter, Google Maps API",
       image: "/images/E-learning Experience.jpg",
+    },
+    {
+      id: "surah",
+      title: t('projects.surah.title'),
+      category: "Mobile",
+      description: t('projects.surah.description'),
+      tech: "React Native, Expo, Redux, SQLite",
+      image: "/images/surah-placeholder.jpg",
     }
   ];
 
@@ -89,24 +98,26 @@ export default function PortfolioPage() {
 
           <div className="projects-grid">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="project-card card card-project">
-                <div className="project-image-wrapper">
-                  <img src={project.image} alt={project.title} />
-                  <div className="overlay">
-                    <ExternalLink size={24} color="#FFF" />
+              <Link key={project.id} href={`/portfolio/${project.id}`} className="project-card-link">
+                <div className="project-card card card-project">
+                  <div className="project-image-wrapper">
+                    <img src={project.image} alt={project.title} />
+                    <div className="overlay">
+                      <ExternalLink size={24} color="#FFF" />
+                    </div>
+                  </div>
+                  <div className="project-info">
+                    <span className="cat">{t(`categories.${project.category.toLowerCase()}`)}</span>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <div className="tech-tags">
+                      {project.tech.split(', ').map(techItem => (
+                        <span key={techItem} className="tech-tag">{techItem}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="project-info">
-                  <span className="cat">{t(`categories.${project.category.toLowerCase()}`)}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="tech-tags">
-                    {project.tech.split(', ').map(techItem => (
-                      <span key={techItem} className="tech-tag">{techItem}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -186,11 +197,18 @@ export default function PortfolioPage() {
           }
         }
 
+        .project-card-link {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+        }
+
         .project-card {
           padding: 0;
           overflow: hidden;
           display: flex;
           flex-direction: column;
+          height: 100%;
         }
 
         .project-image-wrapper {

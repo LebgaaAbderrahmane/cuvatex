@@ -52,7 +52,7 @@ export default function TechStack() {
 
       <style jsx>{`
         .tech-stack {
-          background: var(--background);
+          background: transparent;
           padding-bottom: 120px;
         }
 

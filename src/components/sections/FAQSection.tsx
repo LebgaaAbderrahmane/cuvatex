@@ -40,7 +40,7 @@ export default function FAQSection() {
 
       <style jsx>{`
         .faq-section {
-          background: var(--background);
+          background: transparent;
           padding-bottom: 100px;
         }
 
