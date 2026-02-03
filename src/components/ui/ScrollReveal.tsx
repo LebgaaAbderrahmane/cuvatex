@@ -67,6 +67,7 @@ export default function ScrollReveal({
                 ease: [0.25, 0.1, 0.25, 1.0], // Custom ease for smoothness
             }}
             className={className}
+            style={{ touchAction: 'auto' }}
         >
             {children}
         </motion.div>
@@ -98,6 +99,7 @@ export function StaggerContainer({
                 }
             }}
             className={className}
+            style={{ touchAction: 'auto' }}
         >
             {children}
         </motion.div>
@@ -119,6 +121,7 @@ export function StaggerItem({ children, className = '' }: { children: ReactNode;
                 }
             }}
             className={className}
+            style={{ touchAction: 'auto' }}
         >
             {children}
         </motion.div>
