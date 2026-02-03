@@ -24,6 +24,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function StudyCase() {
   const t = useTranslations('StudyCase');
@@ -94,222 +95,236 @@ export default function StudyCase() {
       </section>
 
       {/* Overview & Problem */}
-      <section className="section bg-surface">
-        <div className="container">
-          <div className="content-grid">
-            <div className="main-content">
-              <h2 className="section-title">{t('sections.overview')}</h2>
-              <p>
-                Surah is an offline-first Quran audio application created to solve the issue of digital distractions during worship. By allowing users to import high-quality recitations from YouTube and listen to them offline, it provides a dedicated sanctuary for Quranic listening.
-              </p>
-              <p>
-                The engineering focused on high-performance audio processing and a "clinical" UI design that stays out of the user's way.
-              </p>
+      <ScrollReveal>
+        <section className="section bg-surface">
+          <div className="container">
+            <div className="content-grid">
+              <div className="main-content">
+                <h2 className="section-title">{t('sections.overview')}</h2>
+                <p>
+                  Optimized a high-traffic E-commerce platform, enhancing mobile checkouts and personalized shopping experiences with React Native.
+                </p>
+                <p>
+                  The engineering focused on high-performance logic and a seamless UI design that stays out of the user's way.
+                </p>
 
-              <h3 className="mt-48 sub-title">{t('sections.problem')}</h3>
-              <p>
-                Traditional streaming platforms are designed to keep users engaged via algorithms, notifications, and ads. For a user trying to focus on Quranic recitation, these features become active hurdles. Additionally, data connectivity can be inconsistent, making a reliable offline solution mandatory for a premium experience.
-              </p>
+                <h3 className="mt-48 sub-title">{t('sections.problem')}</h3>
+                <p>
+                  Slow load times and complex navigation were causing high cart abandonment rates on mobile devices.
+                </p>
+              </div>
+
+              <div className="sidebar">
+                <div className="card tech-card shadow-hover">
+                  <h3>{t('sections.tech')}</h3>
+                  <ul className="tech-list">
+                    <li><strong>Core:</strong> React Native (Expo)</li>
+                    <li><strong>State:</strong> Redux Toolkit & Persist</li>
+                    <li><strong>Database:</strong> SQLite (Local Storage)</li>
+                    <li><strong>Audio:</strong> Expo AV & Background Actions</li>
+                    <li><strong>UI:</strong> FlashList & Reanimated</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Visual Design Gallery */}
+      <ScrollReveal>
+        <section className="section">
+          <div className="container">
+            <div className="section-header centered">
+              <h2 className="section-title">User Interface & Design</h2>
+              <p className="subtitle">Minimalist aesthetics for maximum focus.</p>
             </div>
 
-            <div className="sidebar">
-              <div className="card tech-card shadow-hover">
-                <h3>{t('sections.tech')}</h3>
-                <ul className="tech-list">
-                  <li><strong>Core:</strong> React Native (Expo)</li>
-                  <li><strong>State:</strong> Redux Toolkit & Persist</li>
-                  <li><strong>Database:</strong> SQLite (Local Storage)</li>
-                  <li><strong>Audio:</strong> Expo AV & Background Actions</li>
-                  <li><strong>UI:</strong> FlashList & Reanimated</li>
+            <div className="gallery-grid">
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Library View]</span>
+              </motion.div>
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Audio Player]</span>
+              </motion.div>
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Search & Discovery]</span>
+              </motion.div>
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Settings & Customization]</span>
+              </motion.div>
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Offline Manager]</span>
+              </motion.div>
+              <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
+                <span>[Interface: Onboarding Flow]</span>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Engineering Challenges */}
+      <ScrollReveal>
+        <section className="section bg-surface">
+          <div className="container">
+            <div className="content-narrow">
+              <h2 className="centered section-title sub-title">{t('sections.journey')}</h2>
+
+              <div className="process-flow">
+                <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
+                  <div className="icon-badge"><Zap /></div>
+                  <div className="step-content">
+                    <h4>Background Efficiency</h4>
+                    <p>Implemented a custom background task manager to handle long-running audio downloads and metadata extraction without draining CPU resources.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
+                  <div className="icon-badge"><Layers /></div>
+                  <div className="step-content">
+                    <h4>Smart Audio Indexing</h4>
+                    <p>Developed an intelligent parser that reads YouTube video titles and automatically identifies Reciter names and Surah numbers using regex and fuzzy matching.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
+                  <div className="icon-badge"><Database /></div>
+                  <div className="step-content">
+                    <h4>Offline Data Integrity</h4>
+                    <p>Utilized SQLite to manage a complex relational database of Surahs, Ayahs, and local file paths, ensuring the library remains consistent even after app updates.</p>
+                  </div>
+                </motion.div>
+
+                <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
+                  <div className="icon-badge"><Lock /></div>
+                  <div className="step-content">
+                    <h4>Secure Content Storage</h4>
+                    <p>Encrypted local metadata to prevent unauthorized tampering with user collections while maintaining high-speed retrieval rates.</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Features Grid */}
+      <ScrollReveal>
+        <section className="section">
+          <div className="container">
+            <div className="section-header centered">
+              <h2 className="section-title">{t('sections.features')}</h2>
+              <p className="subtitle">Engineered for a seamless spiritual journey.</p>
+            </div>
+
+            <div className="features-grid">
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><WifiOff /></div>
+                <h3>Offline-First Architecture</h3>
+                <p>Complete data availability without internet. Every recitation is stored locally with high-fidelity audio quality.</p>
+              </div>
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><Youtube /></div>
+                <h3>YouTube Meta-Extractor</h3>
+                <p>One-click import system that handles the conversion and organization automatically.</p>
+              </div>
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><Palette /></div>
+                <h3>Reverent UI/UX</h3>
+                <p>A clean interface with high contrast, readable typography, and smooth transitions that reflect the sanctity of the content.</p>
+              </div>
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><Headphones /></div>
+                <h3>Advanced Audio Controls</h3>
+                <p>A-B repeat functionality, playback speed adjustment, and a dedicated 'focus mode' for memorization.</p>
+              </div>
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><Globe /></div>
+                <h3>Multi-Source Support</h3>
+                <p>Support for multiple recitation sources beyond YouTube, including local file imports and cloud storage sync.</p>
+              </div>
+              <div className="feature-card-detailed card shadow-hover">
+                <div className="icon-wrapper"><MessageSquare /></div>
+                <h3>Intelligent Categorization</h3>
+                <p>Automatic tagging of Riwayats (Hafs, Warsh, etc.) based on audio signature analysis and metadata parsing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Results & Deliverables */}
+      <ScrollReveal>
+        <section className="section bg-surface">
+          <div className="container">
+            <div className="content-grid align-center">
+              <div className="hero-image">
+                <div className="placeholder-image mockup-device shadow-hover">
+                  <div className="inner-placeholder">
+                    <CheckCircle2 size={40} className="mb-16" />
+                    <span>[Final Production Result]</span>
+                  </div>
+                </div>
+              </div>
+              <div className="main-content">
+                <h2 className="section-title">{t('sections.deliverables')}</h2>
+                <ul className="checklist">
+                  <li><CheckCircle2 color="var(--primary)" /> Full system architecture design</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Cross-platform mobile app (iOS & Android)</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Intelligent metadata parsing engine</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Offline storage & database management</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Background audio playback system</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Automated CI/CD pipeline for rapid deployments</li>
+                  <li><CheckCircle2 color="var(--primary)" /> Post-launch maintenance & technical support</li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Visual Design Gallery */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header centered">
-            <h2 className="section-title">User Interface & Design</h2>
-            <p className="subtitle">Minimalist aesthetics for maximum focus.</p>
-          </div>
-
-          <div className="gallery-grid">
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Library View]</span>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Audio Player]</span>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Search & Discovery]</span>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Settings & Customization]</span>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Offline Manager]</span>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="placeholder-image gallery-item shadow-hover">
-              <span>[Interface: Onboarding Flow]</span>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Engineering Challenges */}
-      <section className="section bg-surface">
-        <div className="container">
-          <div className="content-narrow">
-            <h2 className="centered section-title sub-title">{t('sections.journey')}</h2>
-
-            <div className="process-flow">
-              <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
-                <div className="icon-badge"><Zap /></div>
-                <div className="step-content">
-                  <h4>Background Efficiency</h4>
-                  <p>Implemented a custom background task manager to handle long-running audio downloads and metadata extraction without draining CPU resources.</p>
-                </div>
-              </motion.div>
-
-              <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
-                <div className="icon-badge"><Layers /></div>
-                <div className="step-content">
-                  <h4>Smart Audio Indexing</h4>
-                  <p>Developed an intelligent parser that reads YouTube video titles and automatically identifies Reciter names and Surah numbers using regex and fuzzy matching.</p>
-                </div>
-              </motion.div>
-
-              <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
-                <div className="icon-badge"><Database /></div>
-                <div className="step-content">
-                  <h4>Offline Data Integrity</h4>
-                  <p>Utilized SQLite to manage a complex relational database of Surahs, Ayahs, and local file paths, ensuring the library remains consistent even after app updates.</p>
-                </div>
-              </motion.div>
-
-              <motion.div whileHover={{ x: 10 }} className="process-step card shadow-hover">
-                <div className="icon-badge"><Lock /></div>
-                <div className="step-content">
-                  <h4>Secure Content Storage</h4>
-                  <p>Encrypted local metadata to prevent unauthorized tampering with user collections while maintaining high-speed retrieval rates.</p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header centered">
-            <h2 className="section-title">{t('sections.features')}</h2>
-            <p className="subtitle">Engineered for a seamless spiritual journey.</p>
-          </div>
-
-          <div className="features-grid">
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><WifiOff /></div>
-              <h3>Offline-First Architecture</h3>
-              <p>Complete data availability without internet. Every recitation is stored locally with high-fidelity audio quality.</p>
-            </div>
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><Youtube /></div>
-              <h3>YouTube Meta-Extractor</h3>
-              <p>One-click import system that handles the conversion and organization automatically.</p>
-            </div>
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><Palette /></div>
-              <h3>Reverent UI/UX</h3>
-              <p>A clean interface with high contrast, readable typography, and smooth transitions that reflect the sanctity of the content.</p>
-            </div>
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><Headphones /></div>
-              <h3>Advanced Audio Controls</h3>
-              <p>A-B repeat functionality, playback speed adjustment, and a dedicated 'focus mode' for memorization.</p>
-            </div>
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><Globe /></div>
-              <h3>Multi-Source Support</h3>
-              <p>Support for multiple recitation sources beyond YouTube, including local file imports and cloud storage sync.</p>
-            </div>
-            <div className="feature-card-detailed card shadow-hover">
-              <div className="icon-wrapper"><MessageSquare /></div>
-              <h3>Intelligent Categorization</h3>
-              <p>Automatic tagging of Riwayats (Hafs, Warsh, etc.) based on audio signature analysis and metadata parsing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results & Deliverables */}
-      <section className="section bg-surface">
-        <div className="container">
-          <div className="content-grid align-center">
-            <div className="hero-image">
-              <div className="placeholder-image mockup-device shadow-hover">
-                <div className="inner-placeholder">
-                  <CheckCircle2 size={40} className="mb-16" />
-                  <span>[Final Production Result]</span>
-                </div>
-              </div>
-            </div>
-            <div className="main-content">
-              <h2 className="section-title">{t('sections.deliverables')}</h2>
-              <ul className="checklist">
-                <li><CheckCircle2 color="var(--primary)" /> Full system architecture design</li>
-                <li><CheckCircle2 color="var(--primary)" /> Cross-platform mobile app (iOS & Android)</li>
-                <li><CheckCircle2 color="var(--primary)" /> Intelligent metadata parsing engine</li>
-                <li><CheckCircle2 color="var(--primary)" /> Offline storage & database management</li>
-                <li><CheckCircle2 color="var(--primary)" /> Background audio playback system</li>
-                <li><CheckCircle2 color="var(--primary)" /> Automated CI/CD pipeline for rapid deployments</li>
-                <li><CheckCircle2 color="var(--primary)" /> Post-launch maintenance & technical support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Impact Section */}
-      <section className="section bg-impact text-white impact-section">
-        <div className="container">
-          <div className="content-narrow centered">
-            <BarChart3 size={48} className="impact-icon" />
-            <h2 className="text-white">Project Impact & Results</h2>
-            <div className="impact-grid">
-              <div className="impact-item">
-                <span className="impact-value">99.9%</span>
-                <span className="impact-label">Crash-Free Rate</span>
+      <ScrollReveal>
+        <section className="section transparent-impact impact-section">
+          <div className="container">
+            <div className="content-narrow centered">
+              <BarChart3 size={48} className="impact-icon" />
+              <h2 className="section-title">Project Impact & Results</h2>
+              <div className="impact-grid">
+                <div className="impact-item">
+                  <span className="impact-value">99.9%</span>
+                  <span className="impact-label">Crash-Free Rate</span>
+                </div>
+                <div className="impact-item">
+                  <span className="impact-value">0ms</span>
+                  <span className="impact-label">Offline Latency</span>
+                </div>
+                <div className="impact-item">
+                  <span className="impact-value">15%</span>
+                  <span className="impact-label">Less Battery Drain</span>
+                </div>
               </div>
-              <div className="impact-item">
-                <span className="impact-value">0ms</span>
-                <span className="impact-label">Offline Latency</span>
-              </div>
-              <div className="impact-item">
-                <span className="impact-value">15%</span>
-                <span className="impact-label">Less Battery Drain</span>
-              </div>
+              <p className="lead impact-text-refined">
+                Successfully improved user retention and mobile conversion rates through optimized checkout flows and UX enhancements.
+              </p>
             </div>
-            <p className="lead text-white-80">
-              Surah successfully redefined how users interact with religious content on mobile, moving from a "consumption" mindset to a "contemplation" mindset.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Call to Action */}
-      <section className="section cta-case-section">
-        <div className="container">
-          <div className="cta-case-card shadow-hover">
-            <h2>{t('cta.title')}</h2>
-            <p>{t('cta.subtitle')}</p>
-            <Link href="/contact" className="btn btn-primary">{t('cta.button')}</Link>
+      <ScrollReveal>
+        <section className="section cta-case-section">
+          <div className="container">
+            <div className="cta-case-card">
+              <h2>{t('cta.title')}</h2>
+              <p>{t('cta.subtitle')}</p>
+              <Link href="/contact" className="cta-btn">{t('cta.button')}</Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       <style jsx>{`
         .study-case-page {
@@ -367,8 +382,11 @@ export default function StudyCase() {
           margin-bottom: 40px;
         }
 
-        .text-white-80 {
-          color: rgba(255, 255, 255, 0.8);
+        .impact-text-refined {
+          font-size: 20px;
+          color: var(--accent-2);
+          line-height: 1.6;
+          margin-bottom: 40px;
         }
 
         .stats-grid {
@@ -437,14 +455,9 @@ export default function StudyCase() {
           background: var(--surface);
         }
 
-        .bg-impact {
-          background: var(--accent-1);
-        }
-
-        :global([data-theme="dark"]) .bg-impact {
-          background: var(--surface);
-          border-top: 1px solid var(--border);
-          border-bottom: 1px solid var(--border);
+        .transparent-impact {
+          background: transparent;
+          position: relative;
         }
 
         .content-grid {
@@ -596,20 +609,12 @@ export default function StudyCase() {
         .impact-value {
            font-size: 32px;
            font-weight: 700;
-           color: #fff;
-        }
-
-        :global([data-theme="dark"]) .impact-value {
            color: var(--accent-1);
         }
 
         .impact-label {
            font-size: 14px;
-           color: rgba(255,255,255,0.6);
-        }
-
-        :global([data-theme="dark"]) .impact-label {
-           color: var(--accent-2);
+           color: var(--placeholder);
         }
 
         .cta-case-section {
@@ -617,40 +622,65 @@ export default function StudyCase() {
         }
 
         .cta-case-card {
-          background: var(--primary);
-          padding: 80px;
-          border-radius: 24px;
-          text-align: center;
-          color: #fff;
-        }
-
-        .cta-case-card h2 {
-          color: #fff;
-          margin-bottom: 16px;
-        }
-
-        .cta-case-card p {
-          color: rgba(255,255,255,0.8);
-          margin-bottom: 32px;
-          font-size: 18px;
-        }
-
-        .mt-48 { margin-top: 48px; }
-        .centered { text-align: center; }
-        .content-narrow { max-width: 800px; margin: 0 auto; }
-
-        @media (max-width: 1023px) {
-          .hero-grid, .content-grid, .gallery-grid, .impact-grid, .features-grid {
-            grid-template-columns: 1fr;
+           background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+           padding: 80px;
+           border-radius: 32px;
+           text-align: center;
+           color: #fff;
+           box-shadow: 0 20px 40px rgba(9, 82, 76, 0.2);
+           transition: none;
+         }
+ 
+         .cta-case-card h2 {
+           color: #fff;
+           margin-bottom: 16px;
+         }
+ 
+         .cta-case-card p {
+           color: rgba(255,255,255,0.9);
+           margin-bottom: 32px;
+           font-size: 18px;
+         }
+ 
+         .cta-btn {
+           background: #fff;
+           color: var(--primary);
+           padding: 18px 48px;
+           border-radius: 14px;
+           font-weight: 700;
+           font-size: 18px;
+           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+           display: inline-block;
+           border: none;
+           cursor: pointer;
+           position: relative;
+           z-index: 1;
+           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+         }
+ 
+         .cta-btn:hover {
+           background: #fff;
+           transform: translateY(-4px) scale(1.05);
+           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+           color: var(--primary-dark);
+         }
+ 
+         .mt-48 { margin-top: 48px; }
+         .centered { text-align: center; }
+         .content-narrow { max-width: 800px; margin: 0 auto; }
+ 
+          @media (max-width: 1023px) {
+            .hero-grid, .content-grid, .gallery-grid, .impact-grid, .features-grid {
+              grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+              position: static;
+            }
+            
+            h1 { font-size: 36px; }
           }
-          
-          .sidebar {
-            position: static;
-          }
-          
-          h1 { font-size: 36px; }
-        }
-      `}</style>
+        `}</style>
     </main>
   );
 }

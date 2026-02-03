@@ -288,6 +288,18 @@
             "surah": {
                 "title": "Surah App",
                 "description": "Minimalist, offline-first Quran audio platform for personal recitation libraries."
+            },
+            "healthcare": {
+                "title": "Healthcare App",
+                "description": "Patient-centric mobile application for managing appointments and digital health records."
+            },
+            "elearning": {
+                "title": "E-learning Portal",
+                "description": "Interactive learning platform with real-time collaboration features."
+            },
+            "ai_dashboard": {
+                "title": "AI Analytics Dashboard",
+                "description": "Real-time data visualization platform for AI-powered logistics."
             }
         }
     },
@@ -464,5 +476,15 @@
             "journey": "The Engineering Journey",
             "deliverables": "Functional Requirements Met"
         }
+    },
+    "Terms": {
+        "title": "Terms of Service",
+        "subtitle": "Please read these terms carefully before using our services.",
+        "last_updated": "Last updated: February 2024"
+    },
+    "Privacy": {
+        "title": "Privacy Policy",
+        "subtitle": "Your privacy is important to us. Learn how we handle your data.",
+        "last_updated": "Last updated: February 2024"
     }
 }

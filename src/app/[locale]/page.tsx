@@ -12,6 +12,8 @@ import TechStack from '@/components/sections/TechStack';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
 import StatisticsSection from '@/components/sections/StatisticsSection';
+import FloatingIcons from '@/components/ui/FloatingIcons';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function Home() {
   const t = useTranslations('Index');
@@ -20,15 +22,37 @@ export default function Home() {
 
   return (
     <main>
+      <FloatingIcons icons={[Code, Cpu, Globe, Zap, Layers]} count={15} opacity={0.04} />
       <section className="hero">
         <div className="hero-background-pattern">
-          <div className="floating-elements">
+          <div className="decorative-drawings">
+            {/* These are the SVG outlines requested by the user */}
+            <svg className="drawing drawing-1" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 100C40 66.8629 66.8629 40 100 40C133.137 40 160 66.8629 160 100C160 133.137 133.137 160 100 160C66.8629 160 40 133.137 40 100Z" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
+              <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+              <path d="M100 20V40" stroke="currentColor" strokeWidth="1" />
+              <path d="M100 160V180" stroke="currentColor" strokeWidth="1" />
+              <path d="M180 100H160" stroke="currentColor" strokeWidth="1" />
+              <path d="M40 100H20" stroke="currentColor" strokeWidth="1" />
+            </svg>
+            <svg className="drawing drawing-2" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="50" y="50" width="100" height="100" rx="10" stroke="currentColor" strokeWidth="0.5" strokeDasharray="6 3" />
+              <path d="M30 30L60 60" stroke="currentColor" strokeWidth="0.5" />
+              <path d="M170 170L140 140" stroke="currentColor" strokeWidth="0.5" />
+              <path d="M170 30L140 60" stroke="currentColor" strokeWidth="0.5" />
+              <path d="M30 170L60 140" stroke="currentColor" strokeWidth="0.5" />
+            </svg>
+            <svg className="drawing drawing-3" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 50 Q 25 10 50 50 T 90 50" stroke="currentColor" strokeWidth="0.5" opacity="0.4" />
+              <path d="M10 60 Q 25 20 50 60 T 90 60" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+            </svg>
+          </div>
+          {/* <div className="floating-elements">
             <div className="float-item item-1"><Code size={40} /></div>
             <div className="float-item item-2"><Cpu size={32} /></div>
             <div className="float-item item-3"><Globe size={36} /></div>
             <div className="float-item item-4"><Zap size={28} /></div>
-            {/* <div className="float-item item-5"><Layers size={44} /></div> */}
-          </div>
+          </div> */}
         </div>
 
         <div className="container hero-container fade-in">
@@ -57,16 +81,34 @@ export default function Home() {
         </div>
       </section>
 
-      <StatisticsSection />
+      <ScrollReveal direction="none">
+        <StatisticsSection />
+      </ScrollReveal>
 
-      <ServicesPreview />
-      <ProjectsSnapshot />
-      <ProcessSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <TechStack />
-      <FAQSection />
-      <ContactSection />
+      <ScrollReveal>
+        <ServicesPreview />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProjectsSnapshot />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProcessSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <PricingSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TechStack />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
 
       <style jsx>{`
         .hero {
@@ -87,6 +129,55 @@ export default function Home() {
           width: 100%;
           inset: 0;
           z-index: 1;
+        }
+
+        .decorative-drawings {
+          position: absolute;
+          bottom: -50px;
+          right: -50px;
+          width: 50%;
+          height: 80%;
+          pointer-events: none;
+          color: var(--primary);
+          opacity: 0.1;
+          z-index: -1;
+        }
+
+        .drawing {
+          position: absolute;
+        }
+
+        .drawing-1 {
+          width: 300px;
+          height: 300px;
+          bottom: 10%;
+          right: 5%;
+          animation: rotate 60s linear infinite;
+        }
+
+        .drawing-2 {
+          width: 200px;
+          height: 200px;
+          bottom: 30%;
+          right: 25%;
+          animation: float-drawing 15s ease-in-out infinite;
+        }
+
+        .drawing-3 {
+          width: 400px;
+          height: 200px;
+          bottom: 5%;
+          right: 35%;
+        }
+
+        @keyframes rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        @keyframes float-drawing {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
         }
 
         .gradient-sphere {

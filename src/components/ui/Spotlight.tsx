@@ -1,15 +1,26 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useTheme } from 'next-themes';
 
-interface SpotlightProps {
-    color?: string;
-}
-
-export default function Spotlight({ color = 'rgba(9, 82, 76, 0.15)' }: SpotlightProps) {
+export default function Spotlight() {
     const spotlightRef = useRef<HTMLDivElement>(null);
+    const { theme, resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (!mounted) return;
+
+        const currentTheme = resolvedTheme || theme;
+        // Lower opacity for light mode as requested
+        const spotlightColor = currentTheme === 'dark'
+            ? 'rgba(18, 165, 148, 0.15)'
+            : 'rgba(9, 82, 76, 0.06)';
+
         const handleMouseMove = (e: MouseEvent) => {
             if (!spotlightRef.current) return;
 
@@ -18,12 +29,14 @@ export default function Spotlight({ color = 'rgba(9, 82, 76, 0.15)' }: Spotlight
             const x = clientX - rect.left;
             const y = clientY - rect.top;
 
-            spotlightRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${color}, transparent 80%)`;
+            spotlightRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${spotlightColor}, transparent 80%)`;
         };
 
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, [color]);
+    }, [mounted, theme, resolvedTheme]);
+
+    if (!mounted) return null;
 
     return (
         <>

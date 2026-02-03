@@ -15,12 +15,12 @@ export default function InnerHero({ title, subtitle, cta }: InnerHeroProps) {
     <section className="inner-hero">
       {/* <Spotlight color="rgba(255, 255, 255, 0.1)" /> */}
 
-      <div className="inner-hero-decorations">
+      {/* <div className="inner-hero-decorations">
         <div className="decoration-item decor-1"><Layers size={24} /></div>
         <div className="decoration-item decor-2"><Database size={20} /></div>
         <div className="decoration-item decor-3"><Circle size={16} /></div>
         <div className="decoration-item decor-4"><Triangle size={18} /></div>
-      </div>
+      </div> */}
 
       <div className="container">
         <div className="hero-card">
@@ -78,7 +78,7 @@ export default function InnerHero({ title, subtitle, cta }: InnerHeroProps) {
         }
 
         .hero-card {
-          background: #09524C;
+          background: linear-gradient(to bottom, #09524c 0%, #0a3c36 100%);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.08);
           padding: 60px;
