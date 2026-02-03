@@ -464,5 +464,15 @@
             "journey": "Le Parcours d'Ingénierie",
             "deliverables": "Exigences Fonctionnelles Remplies"
         }
+    },
+    "Terms": {
+        "title": "Conditions de Service",
+        "subtitle": "Veuillez lire attentivement ces conditions avant d'utiliser nos services.",
+        "last_updated": "Dernière mise à jour : Février 2024"
+    },
+    "Privacy": {
+        "title": "Politique de Confidentialité",
+        "subtitle": "Votre vie privée est importante pour nous. Découvrez comment nous traitons vos données.",
+        "last_updated": "Dernière mise à jour : Février 2024"
     }
 }

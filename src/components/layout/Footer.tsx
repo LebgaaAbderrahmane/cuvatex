@@ -45,7 +45,7 @@ export default function Footer() {
             <h3>{t('columns.support')}</h3>
             <ul className="footer-links">
               <li><Link href="/faq">{t('links.faq')}</Link></li>
-              <li><Link href="/legal">{t('links.legal')}</Link></li>
+              <li><Link href="/terms">{t('links.legal')}</Link></li>
               <li><Link href="/privacy">{t('links.privacy')}</Link></li>
             </ul>
           </div>

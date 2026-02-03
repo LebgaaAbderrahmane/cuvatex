@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Smartphone, Rocket, Shield, Zap, Layout, Code, Database, Server, ChevronRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import InnerHero from '@/components/sections/InnerHero';
+import FloatingIcons from '@/components/ui/FloatingIcons';
 import styles from './services.module.css';
 
 export default function ServicesPage() {
@@ -40,6 +41,7 @@ export default function ServicesPage() {
 
   return (
     <main className="services-page">
+      <FloatingIcons icons={[Code, Smartphone, Zap, Server, Database, Layout]} count={12} opacity={0.03} />
       <InnerHero
         title={t('title')}
         subtitle={t('subtitle')}

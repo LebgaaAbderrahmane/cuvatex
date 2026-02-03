@@ -37,6 +37,8 @@ import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import LoadingScreen from '@/components/ui/LoadingScreen';
 import Spotlight from '@/components/ui/Spotlight';
+import PageTransition from '@/components/ui/PageTransition';
+import ProgressBar from '@/components/ui/ProgressBar';
 import ScrollHoverObserver from '@/components/ui/ScrollHoverObserver';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import "../globals.css";
@@ -170,14 +172,17 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
             <div className="global-glow-container">
-              <Spotlight color="rgba(9, 82, 76, 0.1)" />
+              <Spotlight />
               <div className="global-gradient-sphere" />
               <div className="global-gradient-sphere-2" />
             </div>
+            <ProgressBar />
             <LoadingScreen />
             <Navbar />
             <div id="main-content">
-              {children}
+              <PageTransition>
+                {children}
+              </PageTransition>
             </div>
             <Footer />
             <ScrollToTop />

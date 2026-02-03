@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Quote } from 'lucide-react';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function TestimonialsSection() {
   const t = useTranslations('Testimonials');
@@ -19,23 +20,36 @@ export default function TestimonialsSection() {
     <section className="section testimonials-section" id="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2>{t('title')}</h2>
-          <p>{t('subtitle')}</p>
+          <ScrollReveal direction="up" delay={0.1}>
+            <h2>{t('title')}</h2>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={0.2}>
+            <p>{t('subtitle')}</p>
+          </ScrollReveal>
         </div>
 
         <div className="testimonials-grid staggered">
           {testimonials.map((tr, index) => (
-            <div key={index} className="testimonial-card card">
-              <Quote size={40} className="quote-icon" />
-              <p className="quote-text">{tr.quote}</p>
-              <div className="author-info">
-                <img src={avatars[index]} alt={tr.author} className="author-photo" />
-                <div className="author-meta">
-                  <div className="author-name">{tr.author}</div>
-                  <div className="author-position">{tr.position}</div>
+            <ScrollReveal
+              key={index}
+              direction="up"
+              delay={0.3 + index * 0.1}
+              distance={30}
+            >
+              <div className="testimonial-card card">
+                <div className="quote-icon-wrapper">
+                  <Quote size={40} className="quote-icon" />
+                </div>
+                <p className="quote-text">{tr.quote}</p>
+                <div className="author-info">
+                  <img src={avatars[index]} alt={tr.author} className="author-photo" />
+                  <div className="author-meta">
+                    <div className="author-name">{tr.author}</div>
+                    <div className="author-position">{tr.position}</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -79,17 +93,34 @@ export default function TestimonialsSection() {
           display: flex;
           flex-direction: column;
           position: relative;
-          transition: transform 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
           background: var(--background);
         }
 
         .testimonial-card:hover {
-          transform: translateY(-4px);
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-icon-wrapper {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 24px;
         }
 
         .quote-icon {
-          color: var(--border);
-          margin-bottom: 24px;
+          color: var(--primary);
+          opacity: 0.2;
+          transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover .quote-icon {
+          opacity: 0.3;
+          transform: scale(1.1);
         }
 
         .quote-text {
@@ -115,6 +146,12 @@ export default function TestimonialsSection() {
           object-fit: cover;
           border: 2px solid var(--surface);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover .author-photo {
+          transform: scale(1.05);
+          border-color: var(--primary);
         }
 
         .author-name {

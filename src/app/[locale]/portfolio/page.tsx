@@ -6,6 +6,8 @@ import { ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import InnerHero from '@/components/sections/InnerHero';
+import FloatingIcons from '@/components/ui/FloatingIcons';
+import { Code, Globe, Database, Smartphone, Layout, Rocket } from 'lucide-react';
 
 export default function PortfolioPage() {
   const t = useTranslations('PortfolioDetail');
@@ -50,7 +52,7 @@ export default function PortfolioPage() {
       category: "Mobile",
       description: t('projects.surah.description'),
       tech: "React Native, Expo, Redux, SQLite",
-      image: "/images/surah-placeholder.jpg",
+      image: "/images/surah_pages_ex.png",
     }
   ];
 
@@ -65,6 +67,7 @@ export default function PortfolioPage() {
 
   return (
     <main className="portfolio-page">
+      <FloatingIcons icons={[Code, Globe, Database, Smartphone, Layout, Rocket]} count={15} opacity={0.03} />
       <InnerHero
         title={t('title')}
         subtitle={t('subtitle')}

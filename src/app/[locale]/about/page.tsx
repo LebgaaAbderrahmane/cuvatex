@@ -1,8 +1,10 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Target, Users, Award, TrendingUp } from 'lucide-react';
+import { Target, Users, Award, TrendingUp, Heart, Lightbulb, Rocket } from 'lucide-react';
 import InnerHero from '@/components/sections/InnerHero';
+import FloatingIcons from '@/components/ui/FloatingIcons';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export default function AboutPage() {
   const t = useTranslations('About');
@@ -34,6 +36,7 @@ export default function AboutPage() {
 
   return (
     <main className="about-page">
+      <FloatingIcons icons={[Users, Heart, Lightbulb, Rocket, Award]} count={12} opacity={0.03} />
       <InnerHero
         title={t('title')}
         subtitle={t('subtitle')}
@@ -54,54 +57,60 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section mission-vision">
-        <div className="container">
-          <div className="mission-grid">
-            <div className="mission-card card">
-              <Target size={40} className="card-icon" />
-              <h3>{t('mission.title')}</h3>
-              <p>{t('mission.description')}</p>
-            </div>
-            <div className="mission-card card">
-              <Target size={40} className="card-icon" />
-              <h3>{t('vision.title')}</h3>
-              <p>{t('vision.description')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section values-section">
-        <div className="container">
-          <h2 className="section-title">{t('values.title')}</h2>
-          <div className="values-grid staggered">
-            {values.map((value, index) => (
-              <div key={index} className="value-card card">
-                <div className="value-icon">{value.icon}</div>
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
+      <ScrollReveal>
+        <section className="section mission-vision">
+          <div className="container">
+            <div className="mission-grid">
+              <div className="mission-card card">
+                <Target size={40} className="card-icon" />
+                <h3>{t('mission.title')}</h3>
+                <p>{t('mission.description')}</p>
               </div>
-            ))}
+              <div className="mission-card card">
+                <Target size={40} className="card-icon" />
+                <h3>{t('vision.title')}</h3>
+                <p>{t('vision.description')}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
-      <section className="section team-section">
-        <div className="container">
-          <h2 className="section-title">{t('team.title')}</h2>
-          <div className="team-grid">
-            {team.map((member, index) => (
-              <div key={index} className="team-card text-center">
-                <div className="avatar-wrapper">
-                  <img src={member.avatar} alt={member.name} className="avatar" />
+      <ScrollReveal>
+        <section className="section values-section">
+          <div className="container">
+            <h2 className="section-title">{t('values.title')}</h2>
+            <div className="values-grid staggered">
+              {values.map((value, index) => (
+                <div key={index} className="value-card card">
+                  <div className="value-icon">{value.icon}</div>
+                  <h3>{value.title}</h3>
+                  <p>{value.description}</p>
                 </div>
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <section className="section team-section">
+          <div className="container">
+            <h2 className="section-title">{t('team.title')}</h2>
+            <div className="team-grid">
+              {team.map((member, index) => (
+                <div key={index} className="team-card text-center">
+                  <div className="avatar-wrapper">
+                    <img src={member.avatar} alt={member.name} className="avatar" />
+                  </div>
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <style jsx>{`
         .grid-2 {
